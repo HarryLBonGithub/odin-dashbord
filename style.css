@@ -28,6 +28,7 @@ body{
     display:grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    z-index: 0;
 }
 
 .search{
@@ -107,6 +108,9 @@ body{
     display: grid;
 
     align-content: start;
+
+
+    z-index: 1;
 }
 
 .logo{
@@ -131,6 +135,7 @@ body{
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 2fr;
+    z-index: -1;
 }
 
 .projects{
@@ -147,13 +152,17 @@ body{
 }
 
 .project-card{
-    background: var(--second-color);
+    background: linear-gradient(to right, var(--primary-color) 9px, var(--second-color) 10px);
     border: 0px solid;
     border-radius: 15px;
     padding: 1rem;
+    padding-left: 1.5rem;
 
     display: flex;
     flex-direction: column;
+
+    box-shadow:  0 6px 4px -4px rgba(0,0,0,0.5); 
+
 }
 
 .project-title{
@@ -221,4 +230,8 @@ body{
     grid-row: 2/3;
     grid-column: 2/3;
     font-size: small;
+}
+
+.hover-shadow{
+    box-shadow:  0 4px 4px 0px rgba(0,0,0,0.2); 
 }
